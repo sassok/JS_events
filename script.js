@@ -59,10 +59,22 @@ btnView[l].addEventListener("mouseover", function MouseBtnView(){
 
 // 7
 
-var firstCard = document.getElementsByClassName("col-md-4");
+var firstCard = document.getElementsByClassName("row");
 var buttonLast = document.getElementsByClassName("btn-secondary");
-console.log(buttonLast);
-//firstCard.addEventListener("btn-secondary.my-2")
+buttonLast[0].addEventListener("click", function(){
+firstCard[1].prepend(document.getElementsByClassName("col-md-4")[5]);
+})
+
+// 8 
+var btnPrime = document.getElementsByClassName("btn-primary");
+
+btnPrime[0].addEventListener("click", function BtnPrime(){
+  btnPrime[0].removeAttribute("href");
+  firstCard[1].append(document.getElementsByClassName("col-md-4")[0]);
+})
+
+
+
 
 
 
